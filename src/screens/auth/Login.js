@@ -1,7 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, TextInput, View, TouchableOpacity, Image } from 'react-native';
-
+import { useNavigation } from '@react-navigation/native';
 export default function LoginScreen() {
+  const navigation=useNavigation()
   return (
     <View style={styles.container}>
       {/* Logo */}
@@ -31,7 +32,7 @@ export default function LoginScreen() {
       </View>
 
       {/* Bouton de connexion */}
-      <TouchableOpacity style={styles.loginButton}>
+      <TouchableOpacity style={styles.loginButton} onPress={()=>{navigation.navigate('UserSpace')}}>
         <Text style={styles.loginButtonText}>Se connecter</Text>
       </TouchableOpacity>
 

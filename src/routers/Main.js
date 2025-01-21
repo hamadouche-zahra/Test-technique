@@ -12,8 +12,8 @@ export default function Main() {
     return(
     <NavigationContainer ref={navigationRef}>
      <Stack.Navigator screenOptions={{headerShown:false}}>
-     <Stack.Screen name="UserSpace" component={UserSpace}/>
      <Stack.Screen name="Login" component={Login}/>
+     <Stack.Screen name="UserSpace" component={UserSpace}/>
   
      </Stack.Navigator>
     </NavigationContainer>
